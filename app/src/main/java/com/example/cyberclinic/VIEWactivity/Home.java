@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cyberclinic.R;
 import com.example.cyberclinic.RoomDataBase.RegistrationDAO;
@@ -30,6 +31,7 @@ public class Home extends AppCompatActivity {
         getSupportActionBar().hide();
         email = findViewById(R.id.email);
         name = findViewById(R.id.name);
+        Toast.makeText(getApplicationContext(),"heyyyyy home sweet home....",Toast.LENGTH_SHORT).show();
         registrationViewModel = ViewModelProviders.of(this).get(RegistrationViewModel.class);
         registrationViewModel.getAllData().observe(this, new Observer<List<RegistrationTable>>() {
             @Override
